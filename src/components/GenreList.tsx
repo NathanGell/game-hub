@@ -21,7 +21,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
 
   return (
     <>
-      <Heading>Genres</Heading>
+      <Heading as='h2' fontSize="20px" marginBottom={3}>Genres</Heading>
       <List>
         {data.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
@@ -30,8 +30,9 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                 src={genre.image_background}
                 boxSize="32px"
                 borderRadius={8}
+                objectFit='cover'
               />
-              <Button
+              <Button whiteSpace='normal' textAlign='left'
                 fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
                 variant="link"
                 onClick={() => onSelectGenre(genre)}
