@@ -4,8 +4,7 @@ import {
   HStack,
   Image,
   List,
-  ListItem,
-  Spinner,
+  ListItem
 } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 
@@ -15,7 +14,7 @@ interface Props {
 }
 
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
-  const { data, isLoading, error } = useGenres();
+  const { data } = useGenres();
 
 
   return (
